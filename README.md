@@ -7,7 +7,7 @@ This repository contains code for Programming Assignment (X) of the course ECE21
 - filter records using conditions on a DataFrame column; and
 - extract a well-defined subset of data without changing the source data.
 
-To view the code itself, access the [related Python notebook file](), which is currently not available.
+To view the code itself, access the [related Python notebook file](). The `cars.csv` file, required to properly execute all included code, is not included.
 
 # A. Positional and Label-based Slicing
 >_Objective_: After loading `cars`, complete the following operations.
@@ -16,8 +16,16 @@ To view the code itself, access the [related Python notebook file](), which is c
 > - From `cars_6_to_10`,  display only the columns `Model`, `mpg`, `cyl`, `hp`, and `gear`, in that order.
 
 The constructed solution is:
-```
-(PRB_SOL_1)
+```py
+cars = pd.read_csv('cars.csv')
+models=cars[['Model']]
+cars_6_to_10=cars.iloc[5:10]
+cars_6_to_10_select=cars_6_to_10.loc[:, ['Model', 'mpg', 'cyl', 'hp', 'gear']]
+
+print(cars.shape)
+display(models)
+display(cars_6_to_10)
+display(cars_6_to_10_select)
 ```
 
 # B. Model Lookup
@@ -27,18 +35,26 @@ The constructed solution is:
 > Store the two results in `toyota` and `pontiac`, respectively. Do not use a hard-coded row number to locate either model.
 
 The constructed solution is:
-```
-(PRB_SOL_2)
+```py
+toyota = cars[cars['Model']=='Toyota Corolla']
+pontiac = cars.loc[cars['Model']=='Pontiac Firebird', ['Model', 'mpg', 'hp', 'wt']]
+
+display(toyota)
+display(pontiac)
 ```
 
-# C. (PRB_3)
+# C. Multi-Model Subsetting
 >_Objective_: Create a DataFrame named `selected_cars` containing only the records for three models: `Datsun 710`, `Lotus Europa`, and `Ferrari Dino`.
 > For these records, retain only `Model`, `mpg`, `cyl`, `hp`, and `gear`. Select the rows by their model values rather than by row numbers. Display `selected_cars` and its shape.
 
 The constructed solution is:
-```
-(PRB_SOL_3)
+```py
+selected_cars = pd.DataFrame(cars.loc[(cars['Model']=='Datsun 710')|(cars['Model']=='Lotus Europa')|(cars['Model']=='Ferrari Dino'), ['Model','mpg','cyl','hp','gear']])
+
+print(selected_cars.shape)
+display(selected_cars)
 ```
 
 ## History
 - 2026, September 3: File created.
+- 2026, September 4: Notebook uploaded.
