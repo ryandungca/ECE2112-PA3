@@ -72,7 +72,7 @@ Despite the length, it retains the form of the previous problems utilizing the `
 
 Finally, to check the shape of the constructed DataFrame `selected_cars`, which should yield `3, 5` to validate its inclusion of three rows and five columns from the original `cars` DataFrame, the function `print(selected_cars.shape)` is used.
 
-The constructed solution is:
+The constructed solution, omitting importing both the Pandas library and `cars.csv`, is:
 ```py
 selected_cars = cars.loc[(cars['Model']=='Datsun 710')|(cars['Model']=='Lotus Europa')|(cars['Model']=='Ferrari Dino'), ['Model','mpg','cyl','hp','gear']]
 
