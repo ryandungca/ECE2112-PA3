@@ -1,7 +1,7 @@
 # ECE2112: Programming Assignment 3
 **Ryan Joseph C. Dungca, 2ECE-D**
 
-This repository contains code for Programming Assignment (X) of the course ECE2112, covering three problems related to _Module 3 - Pandas_. The creation of this code demonstrates the ability to:
+This repository contains code for Programming Assignment 3 of the course ECE2112, covering three problems related to _Module 3 - Pandas_. The creation of this code demonstrates the ability to:
 - load a CSV dataset into a Pandas DataFrame;
 - select rows and columns using positional and label-based indexing;
 - filter records using conditions on a DataFrame column; and
