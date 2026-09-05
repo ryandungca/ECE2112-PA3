@@ -7,7 +7,7 @@ This repository contains code for Programming Assignment (X) of the course ECE21
 - filter records using conditions on a DataFrame column; and
 - extract a well-defined subset of data without changing the source data.
 
-To view the code itself, access the [related Python notebook file](). The `cars.csv` file, required to properly execute all included code, is not included.
+To view the code itself, access the [related Python notebook file](ECE2112-PA3.ipynb). The `cars.csv` file, required to properly execute all included code, is not included.
 
 The prerequisite first line for the problem solution, `cars = pd.read_csv('cars.csv')`, simply imports the local `.csv` file `cars.csv` into the variable `cars` as a Pandas DataFrame. It must be noted that the file is named relatively: this means that the file exists in the same directory as the `.ipynb` file to be run. If the file is not in the same directory as the notebook, its exact location on the system must be specified instead of simply its name.
 
