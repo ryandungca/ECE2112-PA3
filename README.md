@@ -84,3 +84,4 @@ display(selected_cars)
 - 2026, September 3: File created.
 - 2026, September 4: Notebook uploaded.
 - 2026, September 5: Solution explanations introduced; revised notebook uploaded.
+- 2026, September 10: .csv file uploaded.
